@@ -1,0 +1,99 @@
+#v0.4.2
+#breakove
+break1 break : float 2
+break2 break : float 3
+break3 break : float 4
+
+break2if0 if= arg1 : float 0 ; break3
+
+break1if-1 break2if0 : add1 arg1
+break1if<-1 break2if<0 : add1 arg1
+break1if0 break2if0 arg1
+break1if!0 break1if0 arg1 ; break2if0 : float 0
+break1if>0 break2if>0 arg1
+break1if<0 break1if>0 arg1 ; break1if0 arg1 ; break2if0 : float 0
+break1if1 break2if0 : sub1 arg1
+break1if<1 break1if1 arg1 ; break1if>0 : sub1 arg1 ; break2if0 : float 0
+break1if>1 break1if1 arg1 ; break1if<0 : sub1 arg1 ; break2if0 : float 0
+
+break1iflen0 break2if0 : len arg1
+
+break1iffloat break2if= float : type arg1
+break1if!float break1iffloat arg1 ; break2if= 0 0
+break1ifNone break2if= NoneType : type arg1
+break1if!None break1ifNone arg1 ; break2if= 0 0
+
+break1if= break2if= arg1 arg2
+break1if! break1if= arg1 arg2 ; break2if= 0 0
+#printene
+putln putch : newline
+putchln putch arg1 ; putln
+putstr break1iflen0 arg1 ; putch : fst arg1 ; putstr : tail arg1
+putstrln putstr arg1 ; putln
+putfloat putstr : str : float arg1
+putfloatln putstrln : str : float arg1
+put_float break1if!float arg1 ; putfloat arg1 ; break2if= 0 0
+put_str break1iffloat arg1 ; putstr arg1 ; break2if= 0 0
+put put_float arg1 ; put_str arg1
+print put arg1 ; putln
+#aritmetika
+add1_float return : add_float_float arg1 : float 1
+sub1_float return : add_float_float arg1 : float -1
+add1 return : add1_float : float arg1
+sub1 return : sub1_float : float arg1
+add_float_str return : add_float_float arg1 : float arg2
+add_str_float return : add_float_str arg2 : float arg1
+add return : add_str_float arg1 : float arg2
++num add arg1 arg2
+sub_float_float;arg1*=10;swap sub_float_float arg2 : 10* arg1 
+sub_float_float:arg2>0:arg2<1 break1if>1 arg2 ; break1if1 arg2 ; /10 : sub_float_float;arg1*=10;swap arg2 : 10* arg1
+sub_float_float:arg2<0:arg2>-1 break1if<-1 arg2 ; break1if-1 arg2 ; /10 : sub_float_float;arg1*=10;swap arg2 : 10* arg1
+sub_float_float;arg1-=1 return : sub_float_float arg2 : sub1 arg1
+sub_float_float;arg1+=1 return : sub_float_float arg2 : add1 arg1
+sub_float_float:arg2=0 break1if!0 arg2 ; return arg1
+sub_float_float:arg2>0 break1if0 arg2 ; break1if<0 arg2 ; sub_float_float:arg2>0:arg2<1 arg1 arg2 ; return : sub_float_float;arg1-=1 arg2 : sub1 arg1
+sub_float_float:arg2<0 break1if0 arg2 ; break1if>0 arg2 ; sub_float_float:arg2<0:arg2>-1 arg1 arg2 ; return : sub_float_float;arg1+=1 arg2 : add1 arg1
+sub_float_float return : sub_float_float:arg2=0 arg1 arg2 ; return : sub_float_float:arg2>0 arg1 arg2 ; return : sub_float_float:arg2<0 arg1 arg2
+sub_float_float;swap return : sub_float_float arg2 arg1
+sub_float_str return : sub_float_float;swap arg1 : float arg2
+sub_str_float return : sub_float_str arg2 : float arg1
+sub sub_str_float arg1 : float arg2
+- sub arg1 arg2
+-1*_float sub arg1 : 2* arg1
+-1* -1*_float : float arg1
+2*_float return : add arg1 arg1
+2* return : 2*_float : float arg1
+5*_float add arg1 : add arg1 : add arg1 : add arg1 arg1
+5* 5*_float : float arg1
+10* 5* : 2* : float arg1
+#/10 /10_float : float arg1
+/10 / arg1 10
+/_float_str /_float_float arg1 : float arg2
+/_str_float;swap /_float_str arg2 : float arg1
+/ /_str_float;swap arg2 : float arg1
+*_float_float / arg1 : / 1 arg2
+*_float_str *_float_float arg1 : float arg2
+*_str_float *_float_str arg2 : float arg1
+* *_str_float arg1 : float arg2
+#add str
++#1 iftype= arg1 : float 0 ; add arg1 arg2
++ +#1 ; add_float_float arg1 arg2
++str add_float_float arg1 arg2
+#item in list
+last#1 if= 1 : str : len arg1 ; return arg1
+last last#1 ; last : tail arg1
+scnd fst : tail : arg1
+#if=, if!
+if= break1if= arg1 arg2 ; break2if= 0 0
+if!part1 if= arg1 arg2 ; return : float 0
+if! break2if0 : if!part1 arg1 arg2
+#iftype=
+iftype=_type_type break1if= arg1 arg2 ; break2if= 0 0
+iftype=_str_type iftype=_type_type arg2 : type arg1 ; break2if= 0 0
+iftype= iftype=_str_type arg1 : type arg2 ; break2if= 0 0
+#iffunc=
+iffunc=_str_func if= arg2 : arg1 ; break2if= 0 0
+iffunc= iffunc=_str_func arg1 : arg2 ; break2if= 0 0
+#varuables
+dim arg1 return 0
+set del arg1 ; arg1 return arg2

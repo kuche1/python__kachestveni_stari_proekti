@@ -1,0 +1,4 @@
+
+vmesto da pishesh IP-to na partniora si, se svurzva kum "master server", koito "master server" ima
+IP-tata na vseki survur [ima gi zashtoto s svoeto suzdavane, vseki survur se svurzva kum
+master survura, i mu kazva da go zapishe]

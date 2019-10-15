@@ -1,0 +1,6 @@
+$func;$
+$endfunc
+$set;$;$
+$chr;$\n;10
+
+

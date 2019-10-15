@@ -1,0 +1,17 @@
+
+
+a / d - beyblade selection
+e - select current beyblade
+
+b - chagne gamemode to "player vs bot"
+n - change gamemode to "LAN (2 players 1 keyboard)"
+m - change gamemode to "multiplayer (over the internet)"
+, - change gamemode tp "spectate (bot vs bot)"
+
+f - toggle fullscreen
+
+w - move up
+s - move down
+a - move left
+d - move right
+

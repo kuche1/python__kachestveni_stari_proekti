@@ -1,0 +1,65 @@
+set;;
+set;==;==
+set;!=;!=
+set;<=;<=
+set;<;<
+set;>;>
+set;+;+
+set;-;-
+math;True;1;==;1
+chr;\n;10
+
+
+
+
+
+list;directories;$
+list.append;directories;$C:/
+
+print;directories;\n
+
+
+if;#directories;>;0
+
+	os.walk;folders;files;directories[0]
+
+	if;#folders;>;0
+		add;toAdd;directories[0];folders[0]
+		add;toAdd;toAdd;$/
+		
+		list.append;directories;toAdd
+		list.del;folders;0
+	continue
+	endif
+
+	if;#files;>;0
+		add;toAdd;directories[0];files[0]
+		print;toAdd;
+		print;$:;\n	
+		read;fCont;toAdd
+
+		int;elif;1
+		type;type(fCont);fCont
+		if;type(fCont);==;$str
+			print;fCont;\n
+			int;elif;0
+		endif
+		if;elif;==;1
+			print;$NoErrors;\n
+		endif
+
+		input;nil;
+		list.del;files;0
+	continue
+	endif	
+
+	list.del;directories;0
+
+continue
+endif
+
+
+
+
+
+

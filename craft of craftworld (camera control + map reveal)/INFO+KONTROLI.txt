@@ -1,0 +1,37 @@
+
+STIGNI DO SINIOTO KVADRATCHE ZA DA MINESH KUM SLEDVASHTOTO NIVO
+
+
+q - basic ataka (trqbva enemy-to da e v range-a na basic atakata)
+w - ??? (teleport? (kato na tracer ot overwatch))
+e - geroq ti se lekuva
+r - izstrevla projectile
+t - [1. ne mojesh da se dvijish
+2. vsqko enemy okolo teb postepenno gubi kruvta si
+3. postepenno se lekuvash
+]
+t - izstrelva mashinka, koqto se bie s enemy-tata
+u - vsqko enemy okolo teb postepenno gubi kruv; lekuvash se
+i - namalq kruvta na vsichki enemita
+p - zabranqva izkluchvaneto na igrata, spira task manager-a (ne raboti na windows 10, samo na 7) + earrape
+v - spira earrape-a
+
+ARROW KEYS - dvijenie
+
+mouse1 - kara geroq ti da otide kudeto si cuknal
+mouse2 - dokato mouse2 e zadurjan, geroq shte se dviji kum mouse cursor-a
+
+mishkata v nqkoi ot uglite na ekrana kara kamerata da se dviji v tazi posoka
+
+space - vrushta kamerata v nachalna poziciq
+
+
+
+ne cqlata karta e vidima ot samoto nachalo
+za da otkluchish cqlata karta, trqbva da minesh pesha prez neq
+(podobno na starcraft)
+
+
+
+
+

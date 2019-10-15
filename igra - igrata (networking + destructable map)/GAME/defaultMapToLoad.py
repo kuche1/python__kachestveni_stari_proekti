@@ -1,0 +1,1 @@
+delaultMapToLoad = 'customMap2'

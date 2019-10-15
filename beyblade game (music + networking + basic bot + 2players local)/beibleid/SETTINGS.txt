@@ -1,0 +1,5 @@
+
+FPS.txt - target FPS, EFFECTS TIME
+
+
+playerIP.txt - partner's IP for the multiplayer gaemmode

@@ -1,0 +1,10 @@
+
+KONTROLI:
+
+mouse1 - slaga solidno blokche
+s - start (nachalna tochka)
+e - end (kraina tochka)
+r - refresh (natisni "r" sled kato si natisnal "s" ILI kogato iskash da restartirash algorituma)
+space - let algorithm work
+
+

@@ -1,0 +1,37 @@
+
+$chr;$\n;10
+
+
+$list;$directories;$
+$list.append;directories;$C:/
+
+$if;usl{$math;$usl;len(directories){$len;$len(directories);directories};$>;0}
+	$os.walk;$folders;$files;directories[0]
+	
+	$if;usl{$math;$usl;len(files){$len;$len(files);files};$>;0}
+		$math;$file;directories[0];$+;files[0]
+		
+		$try;$errors
+			--<file - imeto na faila
+			$read;$fCont;file
+		$endtry
+		
+		$print;file;$ - 
+		$print;errors;\n
+		
+		$list.del;files;0
+		$input;;$>
+	$continue
+	$endif
+	
+	$if;usl{$math;$usl;len(folders){$len;$len(folders);folders};$>;0}
+		$list.append;directories;a{$math;$a;a;$+;$/{$math;$a;directories[0];$+;folders[0]}}
+		$list.del;folders;0
+	$continue
+	$endif
+	
+	$list.del;directories;0
+$continue
+$endif
+
+
