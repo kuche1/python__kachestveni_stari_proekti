@@ -31,9 +31,10 @@ toundYourselfSound = None
 def loadSounds():
     global soundtrack
     global touchYourselfSound
-    path = sys.argv[0]
-    path = path[:-9]
-    path = path + '/myzik'
+    #path = sys.argv[0]
+    #path = path[:-9]
+    #path = path + '/myzik'
+    path= os.getcwd() + '/myzik'
 
     onlyFiles = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
     
